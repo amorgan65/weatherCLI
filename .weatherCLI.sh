@@ -6,7 +6,7 @@ function temp() {
   #longitude lon float from second line
   LON=$(./whereami | sed -n '2 p' | grep -Eo '[+-]?[0-9]+([.][0-9]+)?')
 
-  KEY="" #<--- API Key in quotes here.
+  KEY=""  #<--- API Key in quotes here.
 
   URL="https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=imperial&appid=${KEY}"
 
@@ -20,3 +20,4 @@ function temp() {
   echo "It is ${temp}° right now in ${location}."
   
   rm ${file_path} 
+}
