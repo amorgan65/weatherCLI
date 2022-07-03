@@ -6,7 +6,7 @@ function temp() {
   #longitude lon float from second line
   LON=$(./whereami | sed -n '2 p' | grep -Eo '[+-]?[0-9]+([.][0-9]+)?')
 
-  KEY="0f17b4981ed7156a5f38d31a86bbe66a"  #<--- API Key in quotes here.
+  KEY="" #<--- API Key in quotes here.
 
   URL="https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=imperial&appid=${KEY}"
 
@@ -15,8 +15,8 @@ function temp() {
   file_path="/usr/local/bin/weatherData/weatherData.json"
 
   temp=$(jq '.main.temp' ${file_path})
-  location=$(jq '.name' ${file_path})
+  location=$(jq -r '.name' ${file_path})
 
-  echo "It is ${temp} degrees in ${location}."
+  echo "It is ${temp}° right now in ${location}."
   
   rm ${file_path} 
