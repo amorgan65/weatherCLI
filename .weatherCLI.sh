@@ -15,7 +15,7 @@ function temp() {
   file_path="/usr/local/bin/weatherData/weatherData.json"
 
   temp=$(jq '.main.temp' ${file_path})
-  location=$(jq '.sys.name' ${file_path})
+  location=$(jq '.name' ${file_path})
 
   echo "It is ${temp} degrees in ${location}."
   
