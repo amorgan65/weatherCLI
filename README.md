@@ -12,7 +12,7 @@ temp
 
 Output:
 ```
-It is 101.35° right now in Imperial.```
+It is 101.35° right now in Imperial.
 ```
 
 Input:
