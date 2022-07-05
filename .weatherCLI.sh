@@ -42,10 +42,12 @@ function weather() {
   wind_speed=$(jq '.wind.speed' ${file_path})
   wind_temp=$(jq '.wind.deg' ${file_path})
   forecast=$(jq -r '.weather[].description' ${file_path})
+  humidity=$(jq '.main.humidity' ${file_path})
 
   echo "It is ${temp}° right now in ${location}."
   echo "Currently: ${forecast}"
   echo "Wind: ${wind_speed} mph & ${wind_temp}°F"
+  echo "Humidity: ${humidity}%"
 
   rm ${file_path} 
 }
