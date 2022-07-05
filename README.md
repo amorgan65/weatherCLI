@@ -12,5 +12,18 @@ temp
 
 Output:
 ```
-It is (temperature)° right now in (city).
+It is 101.35° right now in Imperial.```
+```
+
+Input:
+```
+weather
+```
+
+Output:
+```
+It is 101.35° right now in Imperial.
+Currently: clear sky
+Wind: 9.22 mph and 80°
+Humidity: 25%
 ```
