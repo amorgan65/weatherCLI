@@ -16,8 +16,10 @@ function temp() {
 
   temp=$(jq '.main.temp' ${file_path})
   location=$(jq -r '.name' ${file_path})
+  wind_speed=$(jq '.wind.speed' ${file_path})
 
   echo "It is ${temp}° right now in ${location}."
+  echo "Wind: ${wind_speed} mph"
   
   rm ${file_path} 
 }
