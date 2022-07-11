@@ -19,7 +19,7 @@ function temp() {
   temp=$(jq '.main.temp' ${file_path})
   location=$(jq -r '.name' ${file_path})
 
-  echo "It is ${temp}° right now in ${location}."
+  echo "It is ${temp}°F right now in ${location}."
 
   rm ${file_path} 
 }
@@ -44,10 +44,10 @@ function weather() {
   forecast=$(jq -r '.weather[].description' ${file_path})
   humidity=$(jq '.main.humidity' ${file_path})
 
-  echo "It is ${temp}° right now in ${location}."
+  echo "It is ${temp}°F right now in ${location}."
   echo "Currently: ${forecast}"
   echo "Wind: ${wind_speed} mph & ${wind_temp}°F"
   echo "Humidity: ${humidity}%"
 
-  rm ${file_path} 
+  rm ${file_path}
 }
