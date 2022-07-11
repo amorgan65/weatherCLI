@@ -12,7 +12,7 @@ temp
 
 Output:
 ```
-It is 101.35° right now in Imperial.
+It is 101.35°F right now in Imperial.
 ```
 
 Input:
@@ -22,8 +22,8 @@ weather
 
 Output:
 ```
-It is 101.35° right now in Imperial.
+It is 101.35°F right now in Imperial.
 Currently: clear sky
-Wind: 9.22 mph and 80°
+Wind: 9.22 mph and 80°F
 Humidity: 25%
 ```
